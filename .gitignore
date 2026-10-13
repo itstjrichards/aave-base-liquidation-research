@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+*.db
+*.db-shm
+*.db-wal
+
+# Foundry build artifacts (regenerate with `forge build`)
+cache/
+out/
+data/corrupt-backup/

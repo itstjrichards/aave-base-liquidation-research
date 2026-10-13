@@ -1,0 +1,34 @@
+{
+  "name": "aave-base-liquidation-research",
+  "version": "1.0.0",
+  "description": "Read-only research tooling: watches Aave V3 on Base, replays real liquidations on local Anvil forks, and measures how much of the value a competing bot could capture.",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsx index.ts",
+    "watch:hf": "tsx watchers/healthFactorWatcher.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report:liquidations": "docker compose exec watcher node dist/scripts/liquidationReport.js",
+    "benchmark:solvers": "docker compose exec watcher node dist/scripts/solverBenchmark.js",
+    "snapshot:dbs": "docker compose exec watcher node dist/scripts/snapshotDbs.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^17.4.2",
+    "ethers": "^6.17.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^22.20.3",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true,
+    "esbuild@0.28.2": true
+  }
+}
