@@ -7,7 +7,7 @@
     "start": "tsx index.ts",
     "watch:hf": "tsx watchers/healthFactorWatcher.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tsc --noEmit",
     "report:liquidations": "docker compose exec watcher node dist/scripts/liquidationReport.js",
     "benchmark:solvers": "docker compose exec watcher node dist/scripts/solverBenchmark.js",
     "snapshot:dbs": "docker compose exec watcher node dist/scripts/snapshotDbs.js"

@@ -9,3 +9,4 @@ dist/
 cache/
 out/
 data/corrupt-backup/
+.DS_Store
